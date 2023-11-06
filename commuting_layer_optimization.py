@@ -37,16 +37,15 @@ def load_templates():
     replacement.x(qreg_q[0])
     replacement.x(qreg_q[1])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[1], qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.cx(qreg_q[0], qreg_q[2])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[1], qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.cx(qreg_q[0], qreg_q[2])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 1
     template = QuantumCircuit(qreg_q)
@@ -66,17 +65,16 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.x(qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.x(qreg_q[1])
-    replacement.cx(qreg_q[2], qreg_q[0])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[1], qreg_q[0])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.x(qreg_q[1])
+    replacement_2.cx(qreg_q[2], qreg_q[0])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[1], qreg_q[0])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 2
     template = QuantumCircuit(qreg_q)
@@ -96,17 +94,16 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.x(qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[1], qreg_q[0])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[2], qreg_q[0])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[1], qreg_q[0])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[2], qreg_q[0])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 3
     template = QuantumCircuit(qreg_q)
@@ -126,17 +123,16 @@ def load_templates():
     replacement.x(qreg_q[0])
     replacement.x(qreg_q[1])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[0], qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.cx(qreg_q[2], qreg_q[1])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[0], qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.cx(qreg_q[2], qreg_q[1])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 4
     template = QuantumCircuit(qreg_q)
@@ -156,17 +152,16 @@ def load_templates():
     replacement.x(qreg_q[0])
     replacement.x(qreg_q[1])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[2], qreg_q[1])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.cx(qreg_q[0], qreg_q[1])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[2], qreg_q[1])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.cx(qreg_q[0], qreg_q[1])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 5
     template = QuantumCircuit(qreg_q)
@@ -186,17 +181,16 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.x(qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[1], qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[0], qreg_q[2])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[1], qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[0], qreg_q[2])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 6
     template = QuantumCircuit(qreg_q)
@@ -216,17 +210,16 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.x(qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[0], qreg_q[2])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[1], qreg_q[2])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[0], qreg_q[2])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[1], qreg_q[2])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 7
     template = QuantumCircuit(qreg_q)
@@ -244,16 +237,15 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.cx(qreg_q[1], qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[1], qreg_q[2])
-    replacement.cx(qreg_q[0], qreg_q[2])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[1], qreg_q[2])
+    replacement_2.cx(qreg_q[0], qreg_q[2])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 8
     template = QuantumCircuit(qreg_q)
@@ -271,16 +263,15 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.x(qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[2], qreg_q[0])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[1], qreg_q[0])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[2], qreg_q[0])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[1], qreg_q[0])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 9
     template = QuantumCircuit(qreg_q)
@@ -298,16 +289,15 @@ def load_templates():
     replacement.x(qreg_q[1])
     replacement.x(qreg_q[2])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[1], qreg_q[0])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.cx(qreg_q[2], qreg_q[0])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[1], qreg_q[0])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.cx(qreg_q[2], qreg_q[0])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
 
     # Template 10
     template = QuantumCircuit(qreg_q)
@@ -325,16 +315,15 @@ def load_templates():
     replacement.x(qreg_q[2])
     replacement.x(qreg_q[0])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[2], qreg_q[1])
-    replacement.x(qreg_q[0])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.cx(qreg_q[0], qreg_q[1])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[2], qreg_q[1])
+    replacement_2.x(qreg_q[0])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.cx(qreg_q[0], qreg_q[1])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
     
     # Template 11
     template = QuantumCircuit(qreg_q)
@@ -352,16 +341,15 @@ def load_templates():
     replacement.x(qreg_q[2])
     replacement.x(qreg_q[0])
     replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
 
-    replacement = QuantumCircuit(qreg_q)
-    replacement.cx(qreg_q[0], qreg_q[1])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[2])
-    replacement.x(qreg_q[0])
-    replacement.cx(qreg_q[2], qreg_q[1])
-    replacement_dag_dep = circuit_to_dagdependency(replacement)
-    templates.append((template_dag_dep, replacement_dag_dep))
+    replacement_2 = QuantumCircuit(qreg_q)
+    replacement_2.cx(qreg_q[0], qreg_q[1])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[2])
+    replacement_2.x(qreg_q[0])
+    replacement_2.cx(qreg_q[2], qreg_q[1])
+    replacement_2_dag_dep = circuit_to_dagdependency(replacement)
+    templates.append((template_dag_dep, replacement_dag_dep, replacement_2_dag_dep))
     
     return templates
 
@@ -412,7 +400,7 @@ def commuting_layer_optimization(circuit, templates):
         # For each template
         for template in templates:
 
-            if not is_equivalent(dagdependency_to_circuit(template[0]), dagdependency_to_circuit(template[1])):
+            if not is_equivalent(dagdependency_to_circuit(template[0]), dagdependency_to_circuit(template[1])) or not is_equivalent(dagdependency_to_circuit(template[0]), dagdependency_to_circuit(template[2])):
                 raise ValueError("Templates are not equivalent.")
 
             # Apply template matching
@@ -420,12 +408,15 @@ def commuting_layer_optimization(circuit, templates):
 
             # If match is found
             if commuted_circ is not None:
-                reduced_circ = transpile(circuits=commuted_circ, optimization_level=2)
 
-                # If the commutation resulted in a circuit with less operations, repeat process with new circuit
-                if sum(reduced_circ.count_ops().values()) < sum(circuit.count_ops().values()):
+                commuted_circ_2 = library_template_matching(circuit_dag_dep, template[0], template[2])
+                reduced_circ = transpile(circuits=commuted_circ, optimization_level=2)
+                reduced_circ_2 = transpile(circuits=commuted_circ_2, optimization_level=2)
+
+                # If the commutation resulted in a circuit with less operations, pick substitution that resulted in least number of operations
+                if sum(reduced_circ.count_ops().values()) < sum(circuit.count_ops().values()) or sum(reduced_circ_2.count_ops().values()) < sum(circuit.count_ops().values()):
                     reduced = True
-                    circuit = reduced_circ
+                    circuit = reduced_circ_2 if sum(reduced_circ_2.count_ops().values()) < sum(reduced_circ.count_ops().values()) else reduced_circ
                     break
     
     # Remove once testing is done
